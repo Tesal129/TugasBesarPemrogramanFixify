@@ -1,33 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" class="h-full bg-gray-900">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pricelist - Fixify</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="h-full text-white font-sans">
-
+@extends('layout')
+@section('content')
 <div class="min-h-full">
-  <nav class="bg-gray-800/50 border-b border-white/10 sticky top-0 z-50 backdrop-blur-md">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex h-16 items-center justify-between">
-        <div class="flex items-center">
-          <div class="shrink-0">
-            <img src="{{ asset('img/logo.png') }}" alt="Fixify" class="h-8 w-auto" />
-          </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-4">
-              <a href="/" class="{{ request()->is(['/'])?'bg-indigo-600':''}} rounded-md px-3 py-2 text-sm font-medium text-white">Home</a>
-              <a href="/tentang" class="{{ request()->is(['tentang'])?'bg-indigo-600':''}} rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Tentang</a>
-              <a href="/layanan" class="{{ request()->is(['layanan'])?'bg-indigo-600':''}} rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Layanan</a>
-              <a href="/pricelist" class="{{ request()->is(['pricelist'])?'bg-indigo-600':''}} rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Pricelist</a>
-              <a href="/dashboard" class="{{ request()->is(['dashboard'])?'bg-indigo-600':''}} rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Dashboard</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
   <header class="bg-gray-800 border-b border-white/10 py-12">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl font-bold tracking-tight text-white">Daftar Harga</h1>
@@ -110,3 +83,4 @@
 
 </body>
 </html>
+@endsection
